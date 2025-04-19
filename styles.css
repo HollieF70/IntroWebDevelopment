@@ -1,0 +1,343 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body Styling */
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    color: #000000;  /*Text color*/
+    background-color: #f6f6f6; /* Background color */
+    padding: 2%; /* Use percentage for padding */
+    font-size: 1rem; /* Relative font size */
+}
+
+/* Header */
+header {
+    background-color: #2f9833; /* Header background color */
+    color: white; /* Header text color */
+    text-align: center;
+    padding: 10px 0;
+    font-size: 1.5em;
+}
+
+/* Navigation Bar */
+
+.hamburger-icon {
+    display: inline-block;
+    cursor: pointer;
+    margin: 10px;
+    position: relative;
+}
+
+.hamburger-icon span {
+    display: block;
+    width: 30px;
+    height: 3px;
+    background-color: #e10bc4; /* Color of the hamburger lines */
+    margin: 5px 0;
+    transition: all 0.3s ease; /* Smooth transition for animations */
+}
+
+nav {
+    display: none; /* Hide navigation by default */
+    justify-content: center; /* Center links */
+    flex-wrap: wrap; /* Allow wrapping on smaller screens */
+    background-color: #080808; /* Navigation background color */
+    color: white; /* Navigation text color */
+    padding: 10px;
+    text-align: center;
+}
+
+nav.visible {
+    display: block; /* Show the navigation menu when the 'visible' class is added */
+}
+
+nav a {
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+    margin: 0 1rem; /* Use rem for spacing */
+    display: inline-block;
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
+
+/* Sections */
+section {
+    margin: 20px 0;
+    padding: 20px;
+    background-color: #ffffff; /* Section background color */
+    border: 1px solid #d31313; /* Section border color */
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Images */
+img {
+    max-width: 100%; /*Sets image width to 100% of its container*/
+    height: auto; 
+    display: block;
+    margin: 0 auto;
+}
+
+/*Projects Section*/
+.Projects-Container {
+    display: flex; 
+    flex-wrap: wrap;
+    gap: 20px; /* Space between project items */
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.Project-Card {
+    display: block; 
+    background-color: #549ccc; /* Project card background color */
+    border: 1px solid #000000; /* Project card border color */
+    border-radius: 10px; /* Rounded corners */
+    padding: 20px;
+    width: 100%; /* Full width on smaller screens */
+    max-width: 100%; /* Limit width on larger screens */
+    -webkit-box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* webkit is used as a prefix for older versions of Safari */
+    -moz-box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* moz is used as a prefix for older versions of Firefox */
+    -ms-box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* IE compatibility */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Standard box-shadow */
+    text-align: center;
+    border: 1px solid #000; /* Fallback for rounded corners */
+}
+
+.Project-Card img {
+    max-width: 100%; /* Sets image width to 100% of its container */
+    height: 200px; 
+    border-radius: 5px; /* Rounded corners for images */
+}
+
+.Project-Card h3 {
+    font-size: 1.2em;
+    margin: 10px 0;
+    color: #000000; /* Project title color */
+}
+
+.Project-Card p {
+    font-size: 0.9em;
+    color: #f7ef02; /* Project description color */
+}
+
+/* Lists */
+ul {
+    list-style-type: square; /* Bullet points style */
+    margin: 10px 0;
+    padding-left: 20px;
+}
+
+li {
+    margin: 5px 0;
+}
+
+.Skills-List {
+    list-style: none; /* Removes styling from ul specifically in the Skills-List class */
+    padding: 0;
+    margin: 0;
+}
+
+.Skills-List li {
+    position: relative;
+    padding-left: 30px; /* Space for custom bullet */
+    margin-bottom: 10px;
+    font-size: 1.1em;
+    color: #20badc; /* Skills text color */
+}
+
+.Skills-List li::before { /*Add content before each list item*/
+    content: "✓"; /* Custom bullet */
+    position: absolute; 
+    left: 0; 
+    top: 0;
+    color: #000000; /* Bullet color */
+    font-size: 1.5em; /* Bullet size */
+    line-height: 1; /* Align bullet with text */
+}
+
+
+/* Contact Us Form Section */
+#Contact {
+    margin: 20px 0; 
+    padding: 20px; 
+    background-color: #e69797; /* Section background color */
+    border: 1px solid #000000; /* Border color */
+    border-radius: 5px; /* Rounded corners */
+    -webkit-box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Vendor prefix for box-shadow */
+    -moz-box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Vendor prefix for box-shadow */
+    -ms-box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* IE compatibility */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Standard box-shadow */
+}
+
+#Contact h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px; /* Space between form elements */
+}
+
+form label {  /* Label for form elements */
+    font-weight: bold; 
+    color: #333;
+}
+
+form input, form textarea { /* Input and textarea styles */
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #000000;
+    border-radius: 5px;
+    font-size: 1em;
+    box-sizing: border-box; /* Ensures padding and border are included in width/height */
+}
+
+form button {
+    background-color: #4CAF50; /* Button background color */
+    color: rgb(0, 0, 0);
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    font-size: 1em;
+    cursor: pointer;
+    -webkit-transition: background-color 0.3s ease, color 0.3s ease; /* webkit used for older versions of Safari*/
+    -moz-transition: background-color 0.3s ease, color 0.3s ease; /* moz used for older versions of Firefox */
+    -o-transition: background-color 0.3s ease, color 0.3s ease; /* o used for older versions of Opera */
+    transition: background-color 0.3s ease, color 0.3s ease; /* Standard transition */
+}
+
+form button:hover {
+    background-color: #292bab; /* Button color when hovering over */
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    margin-top: 20px;
+    padding: 10px;
+    background-color: #333; /* Footer background color */
+    color: white;
+    border-radius: 5px;
+}
+
+/* Mobile Styles (up to 600px) */
+@media (max-width: 600px) {
+    body {
+        padding: 10px;
+    }
+
+    header {
+        font-size: 1.2em;
+        padding: 8px 0;
+    }
+
+    nav {
+        font-size: 0.9em;
+    }
+
+    nav a {
+        font-size: 0.8rem; /* Smaller font size for smaller screens */
+    }
+
+    section {
+        padding: 10px; /* Reduce padding */
+    }
+
+    section {
+        padding: 15px;
+    }
+
+    form input, form textarea, form button {
+        font-size: 0.9em;
+    }
+}
+
+/* Tablet Styles (601px to 1024px) */
+@media (min-width: 601px) and (max-width: 1024px) {
+    body {
+        padding: 15px;
+    }
+
+    header {
+        font-size: 1.4em;
+        padding: 10px 0;
+    }
+
+    nav {
+        font-size: 1em;
+    }
+
+    section {
+        padding: 20px;
+    }
+
+    form input, form textarea, form button {
+        font-size: 1em;
+    }
+}
+
+/* Desktop Styles (1025px and up) */
+@media (min-width: 1025px) {
+    body {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 20px;
+    }
+
+    header {
+        font-size: 1.5em;
+        padding: 15px 0;
+    }
+
+    nav {
+        font-size: 1.1em;
+    }
+
+    section {
+        padding: 25px;
+    }
+
+    form input, form textarea, form button {
+        font-size: 1.1em;
+    }
+}
+
+
+/* Lightbox styles */
+.lightbox {
+    display: none; /* Hidden by default */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8); /* Semi-transparent background */
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.lightbox-content {
+    max-width: 90%;
+    max-height: 90%;
+    border-radius: 5px;
+}
+
+.lightbox .close {
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    color: white;
+    font-size: 2rem;
+    cursor: pointer;
+}

@@ -1,0 +1,102 @@
+<!DOCTYPE html> 
+<html lang="en">    
+<head> 
+    <meta charset="UTF-8"> 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    <meta name="Description" content="This is a webpage about me">
+    <title>My Web Page</title>
+    <link rel="stylesheet" href="styles.css"> 
+    <script src="script.js" defer></script>
+</head> 
+<body>
+<header> Welcome to this Page</header>
+
+<!---Hamburger Icon for Navigation-->
+<div class="hamburger-icon">
+    <span></span>
+    <span></span>
+    <span></span>
+</div>
+
+<!---Navigation Options-->
+<nav role = "navigation" aria-label="Main Navigation"> 
+    <a href="#about">About</a>
+    <a href="#projects">Projects</a>
+    <a href="#skills">Skills</a>
+    <a href="#contact">Contact</a>
+</nav>
+
+<article> This is an article</article>
+
+<!---About Me Section-->
+<section id="about">
+    <h2>All About Me</h2>
+    <p>A Paragraph about Me</p>
+</section>
+
+
+<!---Projects Section-->
+<section id="projects">
+    <h2> Projects </h2>
+
+    <div class="filter-buttons"> <!-- This is the filter button section for the project card section-->
+        <button onclick="filterProjects('All')">All</button>
+        <button onclick="filterProjects('Drapery')">Drapery</button>
+        <button onclick="filterProjects('SearchEngine')">Search Engine</button>
+    </div>
+
+    <div class="Projects-Container">
+        <div class="Project-Card" data-category="Drapery"> <!-- Assign this division to the project card section with the catagory of drapery for filter-->
+           <img src="RMP-Logo.jpg" alt="Screenshot of a Logo">
+            <h3>Logo 1 </h3>
+            <p>This is an RMP Logo</p>
+        </div>
+        <div class="Project-Card" data-category="SearchEngine"> <!-- Assign this division to the project card section with the catagory of search engine for filter-->
+            <img src="google.png" alt="Screenshot of another Logo">
+            <h3>Logo 2 </h3>
+            <p>This is a Google Logo</p>
+        </div>
+    </div>
+</section>
+
+<!---Skills Section-->
+<section id="skills">
+    <h2> These are my common skills</h2>
+    <ul class="Skills-List"> 
+     <li> HTML</li>
+        <li> CSS</li>
+     <li> JavaScript</li>
+     <li> Python</li>
+    </ul>
+</section>
+
+<!---Contact Section-->
+<section id="contact">
+    <h2> Contact Me </h2>
+    <form action="#" method="post" aria-label="Contact Us Form"> 
+        <label for="Name"> Name: </label>
+        <input type="text" id="Name" name="Name" placeholder="Enter your name" required>
+        <span class="error-message"></span> <!-- Error message for Name -->
+    
+        <label for="Email"> Email: </label> 
+        <input type="email" id="Email" name="Email" placeholder="Enter your email" required>
+        <span class="error-message"></span> <!-- Error message for Email -->
+    
+        <label for="Message"> Message: </label>
+        <textarea id="Message" name="Message" placeholder="Enter your Message" rows="5" required></textarea>
+        <span class="error-message"></span> <!-- Error message for Message -->
+
+        <button type="Submit">Submit</button>
+    </form>
+</section>
+
+
+<footer> This is a footer</footer>
+
+<!---Lightbox Section-->
+<div id="lightbox" class="lightbox">  <!--A lightbox is where an image is opened-->
+    <span class="close">&times;</span>
+    <img class="lightbox-content" src="" alt="Project Image">
+</div>  
+</body>
+</html>
